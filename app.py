@@ -116,7 +116,7 @@ if nav=='Feedback':
         to_addtext ={'Feedback':[feedback]}
         to_addtext = pd.DataFrame(to_addtext)
         to_addtext.to_csv("data//feedback.csv",mode='a',header=False,index=False)
-        st.sucess("submitted")
+        st.success("submitted")
     
     
     
