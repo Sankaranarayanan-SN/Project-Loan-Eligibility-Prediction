@@ -111,8 +111,9 @@ if nav=='Insights':
     
 if nav=='Feedback':
     st.title('Please provide with your feedback about the project')
-    st.text_area("enter text here",height = 100)
+    feedback = st.text_area("enter text here",height = 100)
     if st.button("submit"):
+        to_addtext ={'Feedback':[feedback]}
         to_addtext = pd.DataFrame(to_addtext)
         to_add.to_txt("data//feedback.csv",mode='a',header=False,index=False)
         st.sucess("submitted")
