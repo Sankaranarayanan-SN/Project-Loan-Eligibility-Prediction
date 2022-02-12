@@ -12,7 +12,7 @@ st.write("Simple Home Loan Predciton Using a Random Forest Classifer")
 model=pickle.load(open('model.pkl','rb'))
 data=pd.read_csv('data//train.csv')
 
-nav=st.sidebar.radio('Navigation',['Home','Prediction','Contribute','Insights'])
+nav=st.sidebar.radio('Navigation',['Home','Prediction','Contribute','Insights','Feedback'])
 if nav=='Home':
     st.title('Acme Insurance Inc.')
     st.subheader('Annual Health Expenditure Prediction')
