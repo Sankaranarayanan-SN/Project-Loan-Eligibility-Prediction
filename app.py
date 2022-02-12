@@ -109,4 +109,13 @@ if nav=='Insights':
     st.image('data//propertyarea.jpg')
     st.markdown('''Semi-Urban People have higher chances of getting their loan approved when comparitively the Urban and Rural people are less likely to get approved''')
     
+if nav=='Feedback':
+    st.title('Please provide with your feedback about the project')
+    st.text_area("enter text here",height = 10000)
+    if st.button("submit"):
+        to_addtext = pd.dataframe(to_addtext)
+        to_add.to_txt("data//feedback.csv",mode='a',header=False,index=False)
+        st.sucess("submitted")
+    
+    
     
