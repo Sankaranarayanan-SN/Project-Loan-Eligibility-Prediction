@@ -12,7 +12,7 @@ st.write("Simple Home Loan Predciton Using a Random Forest Classifer")
 model=pickle.load(open('model.pkl','rb'))
 data=pd.read_csv('data//train.csv')
 
-nav=st.sidebar.radio('Navigation',['Home','Prediction','Contribute','Insights','Feedback'])
+nav=st.sidebar.radio('Navigation',['Home','Prediction','Contribute','Insights')
 if nav=='Home':
     st.title('Acme Insurance Inc.')
     st.subheader('Annual Health Expenditure Prediction')
@@ -109,14 +109,6 @@ if nav=='Insights':
     st.image('data//propertyarea.jpg')
     st.markdown('''Semi-Urban People have higher chances of getting their loan approved when comparitively the Urban and Rural people are less likely to get approved''')
     
-if nav=='Feedback':
-    st.title('Please provide with your feedback about the project')
-    feedback = st.text_area("enter text here",height = 100)
-    if st.button("submit"):
-        to_addtext ={'Feedback':[feedback]}
-        to_addtext = pd.DataFrame(to_addtext)
-        to_addtext.to_csv("data//feedback.csv",mode='a',header=False,index=False)
-        st.success("submitted")
-    
+
     
     
